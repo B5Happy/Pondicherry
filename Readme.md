@@ -1,4 +1,4 @@
-#Pondicherry Mini Guide
+# Pondicherry Mini Guide
 
 This is an Alexa skill that suggest tourist place, veg or non-veg restaurants.
 The skill was developed with amazon lambda on java script.
