@@ -1,0 +1,121 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "pondicherry guide",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": [
+                        "exit"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RestaurantIntent",
+                    "slots": [
+                        {
+                            "name": "type",
+                            "type": "AMAZON.Genre",
+                            "samples": [
+                                "a {type} restauant",
+                                "I am looking for {type} restaurant"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "i need a  {type} restaurant ",
+                        "have a good lunch",
+                        "to eat ",
+                        "restaurant",
+                        "{type} restaurant",
+                        "I am looking for a {type} restaurant",
+                        "A {type} restaurant"
+                    ]
+                },
+                {
+                    "name": "TourismIntent",
+                    "slots": [],
+                    "samples": [
+                        "a super place",
+                        "beautifull place",
+                        "tourism spot",
+                        "looking for tourism spot"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "ZONAL_AREA",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "west"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "east"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "south"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "north"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "RestaurantIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "type",
+                            "type": "AMAZON.Genre",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.232966450415.554668844866"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.232966450415.554668844866",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What type of restaurant are you looking for veg or non veg?"
+                    }
+                ]
+            }
+        ]
+    }
+}
